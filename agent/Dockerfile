@@ -20,7 +20,7 @@ RUN wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsof
     dpkg -i packages-microsoft-prod.deb && \
     rm packages-microsoft-prod.deb
 # netcore
-RUN apt-get update && apt-get install -y dotnet-sdk-2.1 dotnet-sdk-3.0 dotnet-sdk-3.1
+RUN apt-get update && apt-get install -y dotnet-sdk-2.1 dotnet-sdk-3.0 dotnet-sdk-3.1 dotnet-sdk-5.0  
 ENV PATH="${PATH}:/home/agentuser/.dotnet/tools"
 # az cli:
 RUN echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $(lsb_release -cs) main" | \
